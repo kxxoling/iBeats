@@ -4,16 +4,16 @@ on:
   workflow_dispatch:
     inputs:
       time:
-        description: 'time list'
+        description: "time list"
         required: false
       value:
-        description: 'value list'
+        description: "value list"
         required: false
 
 env:
   # change env here
-  GITHUB_NAME: yihong0618
-  GITHUB_EMAIL: zouzou0208@gmail.com
+  GITHUB_NAME: kxxoling
+  GITHUB_EMAIL: kxxoling@gmail.com
 
 jobs:
   sync:
@@ -53,6 +53,6 @@ jobs:
           github-token: ${{ secrets.G_T }}
           commit-message: "Replace README"
           files: README.md files
-          rebase: 'true'
+          rebase: "true"
           name: ${{ env.GITHUB_NAME }}
           email: ${{ env.GITHUB_EMAIL }}
